@@ -255,7 +255,6 @@ class _AddTaskState extends State<AddTask> {
                             maxLines: null,
                             minLines: 4,
                             controller: _descriptionController,
-                            
                           ),
                           const SizedBox(height: 15),
                           Text(
@@ -393,25 +392,30 @@ class _AddTaskState extends State<AddTask> {
                           Column(
                             children: List.generate(_subtaskControllers.length,
                                 (index) {
-                              return Row(
-                                children: [
-                                  Expanded(
-                                    child: CustomTextField(
-                                      key: ValueKey(_subtaskControllers[index]),
-                                      controller: _subtaskControllers[index],
-                                      hintText: 'Enter subtask',
+                              return Padding(
+                                padding: const EdgeInsets.only(
+                                  bottom: 10,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: CustomTextField(
+                                        key: ValueKey(_subtaskControllers[index]),
+                                        controller: _subtaskControllers[index],
+                                        hintText: 'Enter subtask',
+                                      ),
                                     ),
-                                  ),
-                                  IconButton(
-                                    icon: const Icon(Icons.delete,
-                                        color: Colors.red),
-                                    onPressed: () {
-                                      setState(() {
-                                        _subtaskControllers.removeAt(index);
-                                      });
-                                    },
-                                  ),
-                                ],
+                                    IconButton(
+                                      icon: const Icon(Icons.delete,
+                                          color: Colors.red),
+                                      onPressed: () {
+                                        setState(() {
+                                          _subtaskControllers.removeAt(index);
+                                        });
+                                      },
+                                    ),
+                                  ],
+                                ),
                               );
                             }),
                           ),
