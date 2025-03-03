@@ -2,6 +2,16 @@
 
 A simple **Flutter task management application** that allows users to **create, edit, and manage daily tasks** with authentication, local storage, and Firebase synchronization.
 
+# 📺 Screen Shots
+
+![calendar](https://github.com/user-attachments/assets/bbf96abe-b15f-4fa0-9f2d-d6d5d84ab8b3)
+
+![home](https://github.com/user-attachments/assets/9ed57a5d-6ed4-4c3f-accb-cce262932e2b)
+
+![home-dark](https://github.com/user-attachments/assets/5f52886c-db9b-4d25-9a35-ce6a51118bd2)
+
+![profile](https://github.com/user-attachments/assets/41611436-d67a-4e29-90fd-76dda0c0feae)
+
 ---
 
 ## 🚀 Features  
