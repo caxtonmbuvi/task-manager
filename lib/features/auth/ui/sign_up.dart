@@ -73,7 +73,7 @@ class SignUp extends StatelessWidget {
                       Icons.password,
                       color: Theme.of(context).dividerColor,
                     ),
-                    validator: passwordValidator,
+                    validator: (value) => confirmPasswordValidator(passwordController.text, confirmPasswordController.text),
                   ),
                   SizedBox(height: screenHeight * 0.02),
                   BlocBuilder<TermsCubit, bool>(
@@ -249,7 +249,7 @@ class SignUp extends StatelessWidget {
     if (confirmPassword == null || confirmPassword.isEmpty) {
       return 'Please confirm your password';
     }
-    if (password != confirmPassword) {
+    else if (password != confirmPassword) {
       return 'Passwords do not match';
     }
     return null;

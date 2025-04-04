@@ -40,6 +40,15 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def buildType = variant.buildType.name
+            def versionName = variant.versionName
+            // Customize the APK name here. You can use any pattern you prefer.
+            outputFileName = "CaxtonMbuvi-${buildType}-${versionName}.apk"
+        }
+    }
 }
 
 flutter {
